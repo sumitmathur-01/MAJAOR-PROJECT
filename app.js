@@ -113,6 +113,7 @@ app.use((err, req, res, next) => {
   let { statusCode = 500, message = "Something Went Wrong!" } = err;
   res.status(statusCode).render("error.ejs", { message });
   res.status(statusCode).send(message);
+  next();
 });
 
 //Server_______________________🌐🌐👇🏻
