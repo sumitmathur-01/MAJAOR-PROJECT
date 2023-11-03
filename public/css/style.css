@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap");
+body {
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  flex: 1;
+}
+
+.navbar {
+  background-color: white;
+  height: 5rem;
+}
+
+.uil-compass {
+  color: #fe424d;
+  font-size: 2rem;
+}
+
+.nav-link {
+  color: #222222 !important;
+}
+
+/* footer */
+.f-info-links,
+.f-info-socials,
+.f-info-brand {
+  width: 100%;
+}
+
+.f-info-socials i {
+  font-size: 1.2rem;
+  margin-right: 1rem;
+}
+
+.f-info-links a {
+  text-decoration: none;
+  color: #222222;
+}
+
+.f-info-links a:hover {
+  text-decoration: underline;
+}
+
+.f-info {
+  text-align: center;
+  display: flex;
+  height: 8rem;
+  background-color: #ebebeb;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* cards */
+
+.listing-card {
+  border: none !important;
+  margin-bottom: 2rem;
+  text-decoration: none;
+}
+
+/* .box{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px;
+    flex-wrap: wrap;
+} */
+
+.card img {
+  height: 20rem;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.card-body {
+  padding: 0 !important;
+}
+
+.card-text {
+  margin-top: 10px;
+  font-weight: 400;
+}
+
+/* card effect */
+
+.card-img-overlay {
+  opacity: 0;
+  transition: ease-in-out 0.2s;
+}
+
+.card-img-overlay:hover {
+  opacity: 0.2;
+  background-color: white;
+}
+
+.add-btn {
+  background-color: #fe424d !important;
+  color: white !important;
+}
+
+textarea {
+  height: 10rem;
+}
+
+/* SHOW PAGE */
+/* .show-img {
+  height: 40vh;
+} */
+
+.btns {
+  display: flex;
+}
+
+.show-card {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Scroll bar */
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: white;
+  width: 20px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(189, 189, 189);
+  border-radius: 50px;
+}
+
+.h-effect {
+  color: #18272f;
+  position: relative;
+  text-decoration: none;
+}
+
+.h-effect::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  border-radius: 4px;
+  background-color: #18272f;
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.h-effect:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+/* Map */
+#map {
+  height: 400px;
+}
+
+.bnb{
+  padding: 8px 19px; 
+  border-radius: 30px;
+}
+
+.bnb:hover{
+  background-color: rgb(229, 229, 229);
+}
