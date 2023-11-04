@@ -173,3 +173,23 @@ body::-webkit-scrollbar-thumb {
 .bnb:hover{
   background-color: rgb(229, 229, 229);
 }
+
+.search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+  .search-input{
+      width: 25rem;
+      height: 3rem;
+  }
+
+.search-btn{
+  position: absolute;
+  right: 17px;
+  margin-top: 5px;
+  /* top: 5px; */
+  border-radius: 50%;
+}

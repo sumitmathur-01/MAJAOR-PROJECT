@@ -54,7 +54,7 @@ const store = MongoStore.create({
   touchAfter: 24 * 3600,
 });
 
-store.on("error", () => {
+store.on("error", (err) => {
   console.log("ERROR in MONGO SESSION STORE", err);
 });
 
@@ -105,14 +105,13 @@ app.use("/listings", listingsRouter);
 app.use("/listings/:id/reviews", reviewsRouter);
 app.use("/", userRouter);
 
-app.all("*", (req, res, next) => {
+app.all("*", (req, res, next) => { 
   next(new ExpressError(404, "Page Not Found!"));
 });
 
 app.use((err, req, res, next) => {
   let { statusCode = 500, message = "Something Went Wrong!" } = err;
   res.status(statusCode).render("error.ejs", { message });
-  res.status(statusCode).send(message);
 });
 
 //Server_______________________🌐🌐👇🏻
